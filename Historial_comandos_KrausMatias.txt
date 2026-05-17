@@ -1,0 +1,94 @@
+ssh-keygen
+cat $HOME/.ssh/*.pub
+cd
+mkdir repogit
+cd repogit
+git clone git@github.com:matiaskraus/TP_AySO.git
+cd TP_AySO
+pwd
+ls -l
+cat /etc/passwd
+man grep
+grep UBUNTU /etc/passwd
+grep ubuntu /etc/passwd
+grep -i Ubuntu /etcpasswd
+grep -i Ubuntu /etc/passwd
+sudo grep -i Ubuntu /etc/shadow
+sudo grep -i Ubuntu /etc/shadow | awk -F ':' '{print$2}' > datos_usuario.txt
+cat datos_usuario.txt 
+whoami
+echo "Usuario=$(whoami)">> datos_usuario.txt
+cat datos_usuario.txt 
+git add .
+git status
+git config --global user.mail "matiaskraus22@gmail.com"
+git config --global user.name "matiaskraus"
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuarios.txt"
+git config --global user.mail "matiaskraus22@gmail.com" ; git config --global user.name "matiaskraus"
+git status
+grep "model name" /proc/cpuinfo
+grep "model name" /proc/cpuinfo | head -1
+grep "model name" /proc/cpuinfo | head -1 | awk -F ':' '{print$2} >> info_pc.txt
+cat info_pc.txt
+grep "model name" /proc/cpuinfo | head -1 | awk -F ':' '{print$2} > info_pc.txt
+cat info_pc.txt
+grep "model name" /proc/cpuinfo | head -1 | awk -F ':' '{print$2}' >> info_pc.txt
+cat info_pc.txt 
+git commit -m "feat: Añadiendo información de CPU"
+git add .
+git commit -m "feat: Añadiendo información de CPU"
+git status
+man grep
+man sort
+cat /etc/passwd
+man grep
+man sort
+man head
+man sort
+grep -v "nologin" /etc/passwd | head -10 | sort -k 7 
+man sort
+grep -v "nologin" /etc/passwd | head -10  
+man sort
+grep -v "nologin" /etc/passwd | head -10 | sort -k 7 -t ':'
+grep -v "nologin" /etc/passwd | head -10 | sort -k 7 -t ':' >> lista_ordenada.txt
+cat lista_ordenada.txt 
+git add .
+git commit -m "ADD: Listado de usuarios ordenada"
+git status
+cat << FIN >> README.md
+Alumno: Matias Kraus
+Division: 115
+Turno: Mañana
+FIN
+
+cat README.md 
+git add .
+git commit -m "Docs: Documentado datos del alumno"
+git status
+sudo apt install tree
+sudo snap install tree
+cd
+mkdir -p TP1/{{arquitectura,so}Clase{1..5},so/Clase6}
+tree TP1/
+rm -r TP1/
+tree TP1/
+mkdir -p TP1/{{arquitectura,so}/Clase{1..5},so/Clase6}
+tree TP1/
+cat << EOF >> script_dir.sh
+mkdir -p TP1/{{arquitectura,so}/Clase{1..5},so/Clase6}
+EOF
+
+sudo chmod 777 script_dir.sh 
+cd repogit/TP_AySO/
+cat << EOF >> script_dir.sh
+mkdir -p TP1/{{arquitectura,so}/Clase{1..5},so/Clase6}
+EOF
+
+sudo chmod 777 script_dir.sh 
+ls -l
+git add .
+git commit -m "ADD: añadiendo script"
+git status
+git push
+history -a
+cp .bash_history Historial_comandos_KrausMatias.txt
